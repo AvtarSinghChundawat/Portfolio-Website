@@ -108,7 +108,11 @@ section{
     justify-content: center;
     align-items: center;
     gap: 8rem;
+    /* Adjust the home section to always fill the viewport */
+    min-height: 100vh;
     background-color: black;
+    margin-top: 0;
+    padding-top: 80px; /* Adjusts space from the header */
 }
 
 .home .home-content h1{
@@ -133,11 +137,14 @@ span{
 
 .home-img{
     border-radius: 50%;
+    /* Ensure the image is fully visible */
+    flex-shrink: 0;
 }
 
 .home-img img{
     position: relative;
     width: 32vw;
+    max-width: 400px; /* Ensures the image scales well */
     border-radius: 50%;
     box-shadow: 0 0 25px solid #b74b4b;
     cursor: pointer;
@@ -268,4 +275,3 @@ span{
         margin-top: 4rem;
     }
 }
-
